@@ -1,0 +1,30 @@
+{
+  "name": "node-printer-all",
+  "version": "1.0.0",
+  "description": "Lib para imprimir en todos os dispositivos",
+  "main": "main.js",
+  "scripts": {
+    "rebuild": "electron-rebuild -f -m ./lib/printer"
+  },
+  "keywords": [
+    "printer",
+    "electron",
+    "node"
+  ],
+  "author": "Felipe Alessander",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Feeh03114/print-printer-all/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Feeh03114/print-printer-all.git"
+  },
+  "devDependencies": {
+    "electron-rebuild": "^3.2.7",
+    "grpc": "^1.24.11",
+    "node-gyp": "^9.0.0",
+    "node-pre-gyp": "^0.17.0",
+    "node-thermal-printer": "^4.1.2"
+  }
+}
