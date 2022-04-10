@@ -4,15 +4,28 @@
   "description": "Lib para imprimir en todos os dispositivos",
   "main": "main.js",
   "scripts": {
+    "install": "electron-rebuild -f -m ./lib/printer",
     "rebuild": "electron-rebuild -f -m ./lib/printer"
   },
   "keywords": [
+    "thermal printer",
+    "thermal",
+    "epson",
+    "star",
+    "tanca",
     "printer",
     "electron",
     "node"
   ],
+  "binary": {
+    "module_name": "node_printer",
+    "module_path": "./lib/printer/lib/",
+    "host": "https://github.com/thiagoelg/node-printer/releases/download/",
+    "remote_path": "v{version}"
+  },
   "author": "Felipe Alessander",
   "license": "ISC",
+  "homepage": "https://github.com/Feeh03114/print-printer-all",
   "bugs": {
     "url": "https://github.com/Feeh03114/print-printer-all/issues"
   },
