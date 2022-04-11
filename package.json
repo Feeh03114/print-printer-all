@@ -2,10 +2,11 @@
   "name": "node-printer-all",
   "version": "1.0.0",
   "description": "Lib para imprimir en todos os dispositivos",
-  "main": "main.js",
+  "main": "index.js",
   "scripts": {
-    "install": "electron-rebuild -f -m ./lib/printer",
-    "rebuild": "electron-rebuild -f -m ./lib/printer"
+    "install": "electron-rebuild -f -m ./lib/printer || node-gyp rebuild",
+    "rebuild": "electron-rebuild -f -m ./lib/printer",
+    "build": "tsc"
   },
   "keywords": [
     "thermal printer",
@@ -33,11 +34,12 @@
     "type": "git",
     "url": "git+https://github.com/Feeh03114/print-printer-all.git"
   },
-  "devDependencies": {
+  "dependencies": {
     "electron-rebuild": "^3.2.7",
     "grpc": "^1.24.11",
     "node-gyp": "^9.0.0",
     "node-pre-gyp": "^0.17.0",
-    "node-thermal-printer": "^4.1.2"
+    "node-thermal-printer": "^4.1.2",
+    "@types/node": "^17.0.23"
   }
 }
